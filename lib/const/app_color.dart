@@ -53,8 +53,31 @@ class AppColor {
     colors: [Color(0xFF070B1F), Color(0xFF1A145C), Color(0xFF090D2E)],
   );
 
+  static const LinearGradient successTick=LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+
+    colors: [
+      Color(0xFF6DFF6D),
+      Color(0xFF12B84B),
+    ],
+  );
+
   static const LinearGradient successGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
     colors: [Color(0xFF22C55E), Color(0xFF15803D)],
+  );
+
+  static const LinearGradient errorTic = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+
+    colors: [
+      Color(0xFFFF6B75),
+      Color(0xFFFF3D4F),
+      Color(0xFFE11D35),
+    ],
   );
 
   static const LinearGradient errorGradient = LinearGradient(

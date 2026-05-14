@@ -2,7 +2,6 @@ import 'package:bayrak_baskent/screen/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'model/coutry_model.dart';
 
 void main() async{
   await dotenv.load(fileName: ".env");

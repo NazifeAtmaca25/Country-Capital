@@ -10,6 +10,11 @@ class AppTextStyle {
     color: Colors.white,
   );
 
+  static const TextStyle appTittle = TextStyle(
+    fontSize: 24,
+    color: Colors.white,
+  );
+
   static const TextStyle question = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w600,

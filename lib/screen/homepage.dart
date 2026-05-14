@@ -1,4 +1,5 @@
 import 'package:bayrak_baskent/const/app_text_style.dart';
+import 'package:bayrak_baskent/screen/quiz_page.dart';
 import 'package:flutter/material.dart';
 
 import '../const/app_color.dart';
@@ -43,7 +44,9 @@ class _HomepageState extends State<Homepage> {
                   SizedBox(height: 5,),
                   Image.asset("assets/world.png",height: 400,),
                   GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>QuizPage()));
+                    },
                     child: Container(
                       padding: EdgeInsets.all(15.0),
                       margin: EdgeInsets.symmetric(horizontal: 20),
