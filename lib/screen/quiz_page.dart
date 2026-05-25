@@ -5,6 +5,7 @@ import 'package:bayrak_baskent/const/app_text_style.dart';
 import 'package:bayrak_baskent/const/status.dart';
 import 'package:bayrak_baskent/model/coutry_model.dart';
 import 'package:bayrak_baskent/model/quiz_question.dart';
+import 'package:bayrak_baskent/screen/result_page.dart';
 import 'package:bayrak_baskent/services/country_services.dart';
 import 'package:bayrak_baskent/services/quiz_generator.dart';
 import 'package:flutter/material.dart';
@@ -33,8 +34,13 @@ class _QuizPageState extends State<QuizPage> {
 
   Future<void> loadData() async {
     try {
-      countries = await CountryApi.getData();
-      question = List.generate(15, (index) => getQuestion(countries));
+      var fetchedCountries = await CountryApi.getData();
+      var generatedQuestions = List.generate(15, (index) => getQuestion(fetchedCountries));
+
+      setState(() {
+        countries = fetchedCountries;
+        question = generatedQuestions;
+      });
     } catch (e) {
       print("Data çekme hatası $e");
     }
@@ -52,6 +58,7 @@ class _QuizPageState extends State<QuizPage> {
 
     }else{
       nextTimer?.cancel();
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ResultPage(correctCount: correctCount, wrongCount: wrongCount)));
     }
   }
 
@@ -156,7 +163,7 @@ class _QuizPageState extends State<QuizPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Sıradaki Soru",style: AppTextStyle.appTittle,textAlign: TextAlign.center,),
+                Text(questionIndex==14?"Sonuç Sayfası":"Sıradaki Soru",style: AppTextStyle.appTittle,textAlign: TextAlign.center,),
                 SizedBox(width: 20,),
                 Icon(Icons.arrow_forward_sharp,size: 24,color: Colors.white,)
               ],

@@ -20,9 +20,6 @@ class CountryApi {
       if (response.statusCode == 200) {
         countyData = CountryModel.fromList(countryList as List);
       }
-      debugPrint(countyData.length.toString());
-      debugPrint(countyData[0].name);
-      debugPrint(countyData[4].capital);
       return countyData;
     } on DioException catch (e) {
       debugPrint("Burası çalışıyordirek");

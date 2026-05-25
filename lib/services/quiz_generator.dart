@@ -12,7 +12,7 @@ QuizQuestion getQuestion(List<CountryModel> countries){
   while(wrongAnswer.length<3){
     final wrongCountry=countries[random.nextInt(countries.length)];
 
-    if(wrongCountry.capital != correctAnswer && !wrongAnswer.contains(wrongCountry.capital)){
+    if(wrongCountry.capital != correctAnswer && !wrongAnswer.contains(wrongCountry.capital) && wrongCountry.capital!.isNotEmpty){
       wrongAnswer.add(wrongCountry.capital!);
     }
   }

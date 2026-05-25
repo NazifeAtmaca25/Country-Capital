@@ -10,6 +10,12 @@ class AppTextStyle {
     color: Colors.white,
   );
 
+  static const TextStyle tebrik = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+
   static const TextStyle appTittle = TextStyle(
     fontSize: 24,
     color: Colors.white,

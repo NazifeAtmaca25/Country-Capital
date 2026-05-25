@@ -45,7 +45,7 @@ class _HomepageState extends State<Homepage> {
                   Image.asset("assets/world.png",height: 400,),
                   GestureDetector(
                     onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>QuizPage()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>QuizPage()));
                     },
                     child: Container(
                       padding: EdgeInsets.all(15.0),

@@ -1,4 +1,5 @@
 import 'package:bayrak_baskent/screen/homepage.dart';
+import 'package:bayrak_baskent/screen/result_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 

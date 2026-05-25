@@ -47,6 +47,12 @@ class AppColor {
     colors: [Color(0xFF0B1026), Color(0xFF241B5B), Color(0xFF1B2B7A)],
   );
 
+  static const LinearGradient resultBackground = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFF1B2B7A), Color(0xFF241B5B)],
+  );
+
   static const LinearGradient homepageBackground = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
